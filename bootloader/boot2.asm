@@ -1,7 +1,7 @@
 [BITS 16]
 [org 0x7c00]
 
-KernelName db "LXKernel", 0
+    KernelName db "OSWKernel", 0
 KernelVersion db "v0.1", 0
 
 boot:
