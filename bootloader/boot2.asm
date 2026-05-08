@@ -1,7 +1,7 @@
 [BITS 16]
 [org 0x7c00]
 
-    KernelName db "OSWKernel", 0
+KernelName db "OSWKernel", 0
 KernelVersion db "v0.1", 0
 
 boot:
@@ -34,4 +34,4 @@ space:
 msg db "Hello world!", 0
 
 times 510 - ($ - $$) db 0
-dw 0xAA55 
+dw 0xAA55

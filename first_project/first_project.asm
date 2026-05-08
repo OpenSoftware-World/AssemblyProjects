@@ -2,29 +2,31 @@
 [org 0x7c00]
 
 boot:
-    mov ah, 0x0E
-
-add:
     mov ax, 10
-    mov bx, 8
+    mov bx, 10
     add ax, bx
-    mov dx, ax
-    
-    mov si, msg
-    mov [si], dl         
-    mov [si + 1], dh
 
+    mov bl, 10
+    div bl
+
+    add al, '0'
+    add ah, '0'
+
+    mov [msg], al
+    mov [msg+1], ah
+    mov byte [msg+2], 0
+    mov si, msg
 print:
     lodsb
     or al, al
     jz done
     mov ah, 0x0E
-    int 10h
+    int 0x10
     jmp print
-
 done:
     hlt
 
-msg db 0,0
-times 510 - ($ - $$) db 0
+msg db 0,0,0
+
+times 510-($-$$) db 0
 dw 0xAA55
