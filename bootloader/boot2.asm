@@ -1,3 +1,6 @@
+; What is it used for?
+; It prints "Hello world!" and "OSWKernel v0.1" to the screen.
+
 [BITS 16]
 [org 0x7c00]
 

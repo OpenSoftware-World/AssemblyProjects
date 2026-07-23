@@ -1,3 +1,6 @@
+; What is it used for?
+; It performs the operation 10+10 and prints the result to the screen.
+
 [BITS 16]
 [org 0x7c00]
 

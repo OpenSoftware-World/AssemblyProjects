@@ -1,3 +1,6 @@
+; What is it used for?
+; It prints "Test Bootloader v0.1" on the screen.
+
 [BITS 16]
 [org 0x7C00]
 

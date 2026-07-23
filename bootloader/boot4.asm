@@ -1,3 +1,6 @@
+; What is it used for?
+; It prints "Hi!" on the screen.
+
 [bits 16]
 [org 0x7c00]
 
